@@ -1,0 +1,49 @@
+
+@font-face {
+    font-family: Timer;
+    src: url("CursedTimerULiL.ttf");
+}
+body {
+    margin: 0;
+    background-color: #1D1D42;
+    font-family: Timer;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+h3 {
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    color: #EEEEEE;
+    margin: auto;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #F94F6D;
+    margin: 20px;    
+    text-align: center;
+    font-weight: 400;
+    font-size: 90px;
+    background-color: black;
+    padding: 5px auto;
+    padding-top: 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+
+}
+
+button {
+    background: none;
+    border-color: white;
+    color: white;
+    border-radius: 5px;
+    margin: 0.5px
+}
