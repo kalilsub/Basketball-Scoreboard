@@ -4,35 +4,45 @@ let homeCount = 0
 let guestCount = 0
 
 
-function homeOne() { 
-    homeCount += 1
+function homeBasket(score){
+    homeCount +=score
     homeScore.innerHTML = homeCount
+
+    if(homeCount>guestCount){
+        homeScore.classList.add("glowing-border")
+        guestScore.classList.remove("glowing-border")
+    }else if(homeCount<guestCount){
+        homeScore.classList.remove("glowing-border")
+        guestScore.classList.add("glowing-border")
+    }else if(homeCount === guestCount){
+        homeScore.classList.remove("glowing-border")
+        guestScore.classList.remove("glowing-border")
+    }
 }
 
-function homeTwo() {
-    homeCount += 2
-    homeScore.innerHTML = homeCount
-}
-
-function homeThree() {
-    homeCount += 3
-    homeScore.innerHTML = homeCount
-}
-
-
-
-
-function guestOne() {    
-    guestCount += 1
+function guestBasket(score){
+    guestCount += score
     guestScore.innerHTML = guestCount
+
+    if(homeCount>guestCount){
+        homeScore.classList.add("glowing-border")
+        guestScore.classList.remove("glowing-border")
+    }else if(homeCount<guestCount){
+        homeScore.classList.remove("glowing-border")
+        guestScore.classList.add("glowing-border")
+    }else if(homeCount === guestCount){
+        homeScore.classList.remove("glowing-border")
+        guestScore.classList.remove("glowing-border")
+    }
 }
 
-function guestTwo() {
-    guestCount += 2
-    guestScore.innerHTML = guestCount 
-}
 
-function guestThree() {
-    guestCount += 3
-    guestScore.innerHTML = guestCount 
-}
+document.getElementById("new-game-btn").addEventListener("click",()=>{
+    homeCount = 0
+    guestCount = 0
+    homeScore.innerHTML = homeCount
+    guestScore.innerHTML = guestCount
+    homeScore.classList.remove("glowing-border")
+    guestScore.classList.remove("glowing-border")
+})
+

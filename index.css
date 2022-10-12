@@ -45,5 +45,25 @@ button {
     border-color: white;
     color: white;
     border-radius: 5px;
-    margin: 0.5px
+    margin: 0.5px;
+    
 }
+
+.btn-container{
+    display: flex;
+}
+
+#new-game-btn{
+    margin: auto;
+    font-size: 20px;
+    color:#F94F6D;
+    padding: 15px;
+    border-width: 5px;
+}
+
+.glowing-border {
+    border: 2px solid red;
+    border-radius: 7px;
+    box-shadow: -2px 6px 18px 3px rgba(222, 13, 13, 0.811);
+}
+
